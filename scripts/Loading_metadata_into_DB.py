@@ -8,7 +8,9 @@ def clean_number(num_str):
     return int(num_str.replace(',', ''))
 
 # Load JSON file (adjust path as needed)
-with open("C:\\Users\\LENOVO\\Desktop\\Backup\\Master Folder - Unsplash\\metadata\\images_metadata.json", 'r', encoding='utf-8') as f:
+file_path = "./data/metadata/images_metadata.json"
+
+with open(file_path, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # Connect to PostgreSQL
